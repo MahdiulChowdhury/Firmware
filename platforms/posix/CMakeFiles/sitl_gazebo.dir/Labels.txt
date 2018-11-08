@@ -1,0 +1,14 @@
+# Target labels
+ sitl_gazebo
+# Source files and their labels
+/home/optimusprime/Desktop/Firmware/platforms/posix/CMakeFiles/sitl_gazebo
+/home/optimusprime/Desktop/Firmware/platforms/posix/CMakeFiles/sitl_gazebo.rule
+/home/optimusprime/Desktop/Firmware/platforms/posix/CMakeFiles/sitl_gazebo-complete.rule
+/home/optimusprime/Desktop/Firmware/external/Stamp/sitl_gazebo/sitl_gazebo-install.rule
+/home/optimusprime/Desktop/Firmware/external/Stamp/sitl_gazebo/sitl_gazebo-mkdir.rule
+/home/optimusprime/Desktop/Firmware/external/Stamp/sitl_gazebo/sitl_gazebo-download.rule
+/home/optimusprime/Desktop/Firmware/external/Stamp/sitl_gazebo/sitl_gazebo-update.rule
+/home/optimusprime/Desktop/Firmware/external/Stamp/sitl_gazebo/sitl_gazebo-patch.rule
+/home/optimusprime/Desktop/Firmware/external/Stamp/sitl_gazebo/sitl_gazebo-configure.rule
+/home/optimusprime/Desktop/Firmware/external/Stamp/sitl_gazebo/sitl_gazebo-build.rule
+/home/optimusprime/Desktop/Firmware/external/Stamp/sitl_gazebo/sitl_gazebo-forceconfigure.rule

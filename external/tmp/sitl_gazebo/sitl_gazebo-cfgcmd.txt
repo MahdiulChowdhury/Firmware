@@ -1,0 +1,1 @@
+cmd='/usr/bin/cmake;-DCMAKE_INSTALL_PREFIX=/usr/local;-GUnix Makefiles;/home/optimusprime/Desktop/Firmware/Tools/sitl_gazebo'

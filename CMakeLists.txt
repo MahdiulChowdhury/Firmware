@@ -111,6 +111,7 @@ list(APPEND CMAKE_MODULE_PATH "${PX4_SOURCE_DIR}/cmake")
 #
 include(common/px4_git)
 
+
 execute_process(
 	COMMAND git describe --always --tags
 	OUTPUT_VARIABLE PX4_GIT_TAG

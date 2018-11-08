@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdrivers__vl53lxx.a  CMakeFiles/drivers__vl53lxx.dir/vl53lxx.cpp.o
+/usr/bin/ranlib libdrivers__vl53lxx.a
