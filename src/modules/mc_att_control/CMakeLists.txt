@@ -31,6 +31,21 @@
 #
 ############################################################################
 
+#define USE_FEATURE_A 0
+#define USE_FEATURE_B 1
+
+##if(WITH_FEATURE_A)
+##  message(STATUS "WITH_FEATURE_A")
+##  add_definitions(-DUSE_FEATURE_A=1)
+##  set(WITH_FEATURE_B ON)
+##endif()
+
+##if(WITH_FEATURE_B)
+##  message(STATUS "WITH_FEATURE_B")
+ ## add_definitions(-DUSE_FEATURE_B=1)
+ ## set(WITH_FEATURE_D ON)
+##endif()
+
 
 px4_add_module(
 	MODULE modules__mc_att_control

@@ -1,8 +1,8 @@
-prefix=/home/optimusprime/Desktop/Firmware/devel/.private/catkin_tools_prebuild
+prefix=/home/optimusprime/Documents/Firmware/devel/.private/catkin_tools_prebuild
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/optimusprime/Desktop/Firmware/devel/.private/catkin_tools_prebuild/lib 
+Libs: -L/home/optimusprime/Documents/Firmware/devel/.private/catkin_tools_prebuild/lib 
 Requires: 

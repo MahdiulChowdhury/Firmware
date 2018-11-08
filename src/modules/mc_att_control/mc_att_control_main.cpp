@@ -1,4 +1,4 @@
-/****************************************************************************
+     /****************************************************************************
  *
  *   Copyright (c) 2013-2018 PX4 Development Team. All rights reserved.
  *
@@ -42,7 +42,7 @@
  * @author Beat Küng		<beat-kueng@gmx.net>
  *
  */
-
+#include <iostream>
 #include "mc_att_control.hpp"
 
 #include <conversion/rotation.h>
@@ -60,8 +60,7 @@
 #define AXIS_COUNT 3
 
 using namespace matrix;
-
-
+using namespace std; 
 int MulticopterAttitudeControl::print_usage(const char *reason)
 {
 	if (reason) {
@@ -421,14 +420,15 @@ MulticopterAttitudeControl::control_attitude(float dt)
 
 	/* quaternion attitude control law, qe is rotation from q to qd */
 	Quatf qe = q.inversed() * qd;
-
-	#ifndef USE_FEATURE_A 
+	Vector3f eq;
+	
+	//#ifndef USE_FEATURE_A 
 	/* using sin(alpha/2) scaled rotation axis as attitude error (see quaternion definition by axis angle)
 	 * also taking care of the antipodal unit quaternion ambiguity */
-	Vector3f eq = 2.f * math::signNoZero(qe(0)) * qe.imag();
-	#endif  //USE_EXPERIMENTAL_ROT_CONTROLLER_ORIGINAL
+	// eq = 2.f * math::signNoZero(qe(0)) * qe.imag();
+	//#endif  //USE_EXPERIMENTAL_ROT_CONTROLLER_ORIGINAL
 
-	#ifdef USE_FEATURE_B
+	//#ifndef USE_FEATURE_B
 	float sin_alpha=qe.imag().norm();// norm of the img part of the quaternion sin(alpha)
 	float cos_alpha=qe(0); // norm of the img part of the quaternion cos(alpha/2)
 	float alpha= 2.f *atan2(cos_alpha,sin_alpha);
@@ -442,7 +442,7 @@ MulticopterAttitudeControl::control_attitude(float dt)
 	{
 		eq=0.f*qe.imag();
 	}
-	#endif //USE_EXPERIMENTAL_ROT_CONTROLLER_UPDATED
+	//#endif //USE_EXPERIMENTAL_ROT_CONTROLLER_UPDATED
 
 	/* calculate angular rates setpoint */
 	_rates_sp = eq.emult(attitude_gain);
@@ -898,3 +898,4 @@ int mc_att_control_main(int argc, char *argv[])
 {
 	return MulticopterAttitudeControl::main(argc, argv);
 }
+
